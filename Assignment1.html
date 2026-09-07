@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Expense Calculator</title>
+
+</head>
+
+<body>
+
+
+
+<h2>Personal Expense Calculator</h2>
+
+
+
+Income: <input type="number" id="income"><br><br>
+
+Food Expense: <input type="number" id="food"><br><br>
+
+Travel Expense: <input type="number" id="travel"><br><br>
+
+Others: <input type="number" id="others"><br><br>
+
+
+
+<button onclick="calculate()">Calculate</button>
+
+
+
+<h3 id="result"></h3>
+
+
+
+<script>
+
+function calculate() {
+
+    let income = Number(document.getElementById("income").value);
+
+    let food = Number(document.getElementById("food").value);
+
+    let travel = Number(document.getElementById("travel").value);
+
+    let others = Number(document.getElementById("others").value);
+
+
+
+    let totalExpense = food + travel + others;
+
+    let savings = income - totalExpense;
+
+
+
+    document.getElementById("result").innerHTML =
+
+        "Total Expense: " + totalExpense + "<br>" +
+
+        "Savings: " + savings;
+
+}
+
+</script>
+
+
+
+</body>
+
+</html> 
